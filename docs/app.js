@@ -7,26 +7,29 @@ let x86
 fetch(`https://api.github.com/repos/${repo}/releases/latest`)
     .then(res => res.json())
     .then(data => {
+        const changelogEl = document.getElementById("changelog")
+        if (changelogEl && data.body) changelogEl.innerText = data.body
 
-        document.getElementById("changelog").innerText = data.body
+        const assets = data.assets || []
+        let totalDownloads = 0
 
-        data.assets.forEach(asset => {
-
-            if (asset.name.includes("arm64"))
-                arm64 = asset.browser_download_url
-
-            if (asset.name.includes("armeabi"))
-                armv7 = asset.browser_download_url
-
-            if (asset.name.includes("x86"))
-                x86 = asset.browser_download_url
-
-            document.getElementById("apkSize").innerText =
-                "APK Size: " + (asset.size / 1024 / 1024).toFixed(1) + " MB"
-
+        assets.forEach(asset => {
+            if (asset.name.includes("arm64")) arm64 = asset.browser_download_url
+            if (asset.name.includes("armeabi")) armv7 = asset.browser_download_url
+            if (asset.name.includes("x86")) x86 = asset.browser_download_url
+            totalDownloads += asset.download_count || 0
         })
 
+        const apkSizeEl = document.getElementById("apkSize")
+        if (apkSizeEl && assets.length) {
+            const firstApk = assets.find(a => a.name.endsWith(".apk")) || assets[0]
+            apkSizeEl.textContent = "APK Size: " + (firstApk.size / 1024 / 1024).toFixed(1) + " MB"
+        }
+
+        const downloadsEl = document.getElementById("downloads")
+        if (downloadsEl) downloadsEl.textContent = totalDownloads + " downloads"
     })
+    .catch(() => {})
 
 
 function detectABI() {
@@ -45,26 +48,16 @@ function detectABI() {
 
 
 document.getElementById("installBtn").onclick = () => {
-
-    let url = detectABI()
-
-    let bar = document.getElementById("progressBar")
-
+    const url = detectABI()
+    if (!url) return
+    const bar = document.getElementById("progressBar")
     let progress = 0
-
-    let timer = setInterval(() => {
-
+    const timer = setInterval(() => {
         progress += 10
         bar.style.width = progress + "%"
-
         if (progress >= 100) {
-
             clearInterval(timer)
-
-            window.location = url
-
+            window.location.href = url
         }
-
     }, 150)
-
 }
