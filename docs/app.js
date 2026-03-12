@@ -1,4 +1,4 @@
-const repo = "ToyZ-95/good-life"
+const repo = "ToyZ-95/Orbit"
 
 let arm64
 let armv7
