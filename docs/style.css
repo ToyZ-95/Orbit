@@ -1,0 +1,187 @@
+body {
+
+    margin: 0;
+    font-family: Inter, Arial;
+    background: #0a0c14;
+    color: white;
+
+}
+
+/* HERO */
+
+.hero {
+
+    height: 90vh;
+
+    background: url(images/hero.jpg) center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+}
+
+.hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background:
+
+        linear-gradient(180deg,
+            rgba(0, 0, 0, .4),
+            rgba(0, 0, 0, .85));
+
+}
+
+.hero-content {
+
+    position: relative;
+
+    text-align: center;
+
+    backdrop-filter: blur(20px);
+
+    background: rgba(255, 255, 255, .05);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+}
+
+.app-icon {
+
+    width: 90px;
+    border-radius: 20px;
+
+}
+
+.tagline {
+
+    opacity: .8;
+
+}
+
+/* INSTALL BUTTON */
+
+.install {
+
+    margin-top: 20px;
+
+    padding: 16px 30px;
+
+    font-size: 18px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    background:
+
+        linear-gradient(45deg,
+            #6b6cff,
+            #8b7cff);
+
+    color: white;
+
+    box-shadow: 0 8px 20px rgba(108, 108, 255, .5);
+
+}
+
+/* PROGRESS BAR */
+
+.progress {
+
+    width: 250px;
+
+    height: 6px;
+
+    background: #333;
+
+    margin: auto;
+
+    border-radius: 4px;
+
+    margin-top: 12px;
+
+}
+
+#progressBar {
+
+    width: 0%;
+    height: 6px;
+
+    background: #8b7cff;
+
+    border-radius: 4px;
+
+}
+
+/* SCREENSHOTS */
+
+.screenshots {
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+}
+
+.slider {
+
+    display: flex;
+
+    gap: 20px;
+
+    overflow-x: auto;
+
+    padding: 20px;
+
+}
+
+.slider img {
+
+    height: 440px;
+
+    border-radius: 24px;
+
+}
+
+/* CHANGELOG */
+
+.updates {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 40px;
+
+}
+
+pre {
+
+    background: #141827;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+}
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    opacity: .6;
+
+}
