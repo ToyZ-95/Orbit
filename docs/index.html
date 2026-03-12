@@ -1,72 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>Orbit – Habit Tracker</title>
-    <meta name="description" content="Build powerful habits. Stay consistent.">
-    <meta name="theme-color" content="#1a1625">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <meta property="og:title" content="Orbit – Habit Tracker">
-    <meta property="og:description" content="Build powerful habits. Stay consistent.">
-    <meta property="og:image" content="images/banner.png">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Build powerful habits. Stay consistent."
+    />
+    <meta name="theme-color" content="#1a1625" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:title" content="Orbit – Habit Tracker" />
+    <meta
+      property="og:description"
+      content="Build powerful habits. Stay consistent."
+    />
+    <meta property="og:image" content="images/banner.png" />
+  </head>
+  <body>
     <header class="site-header">
-        <div class="header-inner">
-            <span class="logo">Orbit</span>
-        </div>
+      <div class="header-inner">
+        <span class="logo">Orbit</span>
+      </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-bg" role="presentation"></div>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Orbit</h1>
-                    <p class="tagline">Build powerful habits. Stay consistent.</p>
-                    <p id="apkSize" class="apk-size" aria-live="polite"></p>
-                    <button type="button" id="installBtn" class="install-cta">
-                        Install for your device
-                    </button>
-                    <div class="progress-wrap">
-                        <div class="progress" aria-hidden="true">
-                            <div id="progressBar" class="progress-bar"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="phone-mockup">
-                        <img src="images/1.png" alt="Orbit app – habit streaks and analytics" class="phone-screen">
-                    </div>
-                </div>
+      <section class="hero">
+        <div class="hero-bg" role="presentation"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Orbit</h1>
+            <p class="tagline">Build powerful habits. Stay consistent.</p>
+            <p id="apkSize" class="apk-size" aria-live="polite"></p>
+            <button type="button" id="installBtn" class="install-cta">
+              Install for your device
+            </button>
+            <div class="progress-wrap">
+              <div class="progress" aria-hidden="true">
+                <div id="progressBar" class="progress-bar"></div>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="hero-visual">
+            <div class="phone-mockup">
+              <img
+                src="images/1.png"
+                alt="Orbit app – habit streaks and analytics"
+                class="phone-screen"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="screenshots" aria-labelledby="screenshots-heading">
-            <h2 id="screenshots-heading">Screenshots</h2>
-            <div class="slider-wrap">
-                <div class="slider">
-                    <div class="slide">
-                        <img src="images/1.png" alt="Track your habit streaks with detailed analytics">
-                    </div>
-                    <div class="slide">
-                        <img src="images/2.png" alt="Manage habits and stay consistent">
-                    </div>
-                </div>
+      <section class="screenshots" aria-labelledby="screenshots-heading">
+        <h2 id="screenshots-heading">Screenshots</h2>
+        <div class="slider-wrap">
+          <div class="slider">
+            <div class="slide">
+              <img
+                src="images/1.png"
+                alt="Track your habit streaks with detailed analytics"
+              />
             </div>
-        </section>
+            <div class="slide">
+              <img src="images/2.png" alt="Manage habits and stay consistent" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-        <p>© Orbit</p>
-        <p id="downloads" class="downloads" aria-live="polite"></p>
+      <p>© Orbit</p>
+      <!-- <p id="downloads" class="downloads" aria-live="polite"></p> -->
     </footer>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
