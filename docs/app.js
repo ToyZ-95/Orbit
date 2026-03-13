@@ -27,7 +27,12 @@ fetch(`https://api.github.com/repos/${repo}/releases/latest`)
         }
 
         const downloadsEl = document.getElementById("downloads")
-        if (downloadsEl) downloadsEl.textContent = totalDownloads + " downloads"
+        if (downloadsEl && totalDownloads > 0) {
+            const formatted = totalDownloads >= 1000 
+                ? (totalDownloads / 1000).toFixed(1).replace(/\.0$/, '') + 'K+' 
+                : totalDownloads + '+'
+            downloadsEl.textContent = formatted
+        }
     })
     .catch(() => {})
 
