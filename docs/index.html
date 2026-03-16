@@ -81,6 +81,21 @@
                 <div id="progressBar" class="progress-bar"></div>
               </div>
             </div>
+
+            <div class="previous-versions">
+              <button type="button" class="previous-versions-toggle" id="previousVersionsToggle" aria-expanded="false" aria-controls="previousVersionsList">
+                <span class="toggle-label">Previous versions</span>
+                <svg class="toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6,9 12,15 18,9"/>
+                </svg>
+              </button>
+              <div class="previous-versions-panel" id="previousVersionsList" role="region" aria-labelledby="previousVersionsToggle">
+                <div class="previous-versions-scroll" id="previousVersionsScroll">
+                  <p class="previous-versions-loading" id="previousVersionsLoading">Loading…</p>
+                  <ul class="previous-versions-list" id="previousVersionsListInner" hidden></ul>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="hero-visual">

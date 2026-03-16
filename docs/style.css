@@ -273,6 +273,151 @@ body {
     transition: width 0.15s ease;
 }
 
+/* Previous versions (collapsible) */
+.previous-versions {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1.5rem;
+}
+
+.previous-versions-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: var(--font);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.previous-versions-toggle:hover {
+    color: var(--text);
+    background: var(--bg-card-hover);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.toggle-icon {
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+    transition: transform 0.25s ease;
+}
+
+.previous-versions-toggle[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.previous-versions-panel {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+}
+
+.previous-versions-panel.is-open {
+    max-height: 280px;
+}
+
+.previous-versions-scroll {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.previous-versions-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.previous-versions-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.previous-versions-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.previous-versions-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.previous-versions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.previous-versions-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.previous-versions-list li:last-child {
+    border-bottom: none;
+}
+
+.previous-version-info {
+    min-width: 0;
+}
+
+.previous-version-info strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.previous-version-info span {
+    font-size: 0.8rem;
+    color: var(--text-subtle);
+}
+
+.previous-version-download {
+    flex-shrink: 0;
+    padding: 0.4rem 0.75rem;
+    font-family: var(--font);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-purple);
+    background: rgba(168, 85, 247, 0.15);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.previous-version-download:hover {
+    background: rgba(168, 85, 247, 0.25);
+    border-color: rgba(168, 85, 247, 0.5);
+}
+
+.previous-versions-loading {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--text-subtle);
+}
+
+.previous-versions-empty {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--text-subtle);
+}
+
 /* Phone Mockup */
 .hero-visual {
     position: relative;
